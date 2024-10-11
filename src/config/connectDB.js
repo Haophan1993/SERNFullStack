@@ -3,8 +3,9 @@ import { Sequelize } from 'sequelize';
 
 
 
-const sequelize = new Sequelize('haodb', 'root', null, {
+const sequelize = new Sequelize('bookingcare', 'root', null, {
   host: 'localhost',
+  port: '8111',
   dialect: 'mysql',
   "logging": false
 

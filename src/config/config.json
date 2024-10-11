@@ -2,8 +2,9 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "haoDB",
-    "host": "127.0.0.1",
+    "database": "bookingcare",
+    "host": "localhost",
+    "port": "8111",
     "dialect": "mysql",
     "logging": false
   },
