@@ -21,6 +21,7 @@ module.exports = {
         email: 'haophan@gmail.com',
         password: 'admin123',
         address:'5918 DR MLK',
+        phonenumber:7273108596,
         gender: 1,
         typeRole: 'ROLE',
         keyRole:'R1',
