@@ -5,7 +5,7 @@ import { Sequelize } from 'sequelize';
 
 const sequelize = new Sequelize('bookingcare', 'root', null, {
   host: 'localhost',
-  port: '8111',
+  port: '3307',
   dialect: 'mysql',
   "logging": false
 

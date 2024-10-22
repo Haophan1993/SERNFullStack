@@ -4,9 +4,10 @@
     "password": null,
     "database": "bookingcare",
     "host": "localhost",
-    "port": "8111",
+    "port": "3307",
     "dialect": "mysql",
-    "logging": false
+    "logging": false,
+    "query":{"raw":true}
   },
   "test": {
     "username": "root",
