@@ -38,13 +38,14 @@ let postCRUD = async (req, res)=>{
 let displayGetCRUD = async (req,res)=>{
 
     let dataTable = await CRUDService.getAllUser();
-    //console.log(dataTable);
+    
 
     return res.render('displayCRUD.ejs', {data: dataTable});
 }
 
 let editCRUD = async (req, res)=>{
     let userId=req.query.id;
+    
     if(userId){
         let userData = await CRUDService.getUserInfoById(userId);
         console.log(userData);
@@ -72,11 +73,12 @@ let putCRUD = async (req,res)=>{
    return res.render('displayCRUD.ejs', {data: addUsers});
 }
 
+
+
 let deleteCRUD= async (req, res)=>{
     let id=req.query.id;
     let afterDeleteUsers= await CRUDService.deleteUserbyId(id);
-    // await CRUDService.deleteUserbyId(id);
-    // return res.send("Delete Suceed!!")
+   
     return res.render('displayCRUD.ejs', {data: afterDeleteUsers});
 }
 

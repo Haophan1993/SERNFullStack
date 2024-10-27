@@ -9,13 +9,18 @@ let initWebRoutes= (app)=>{
 
     router.get('/', homeController.getHomePage )
     router.get('/about', homeController.getAboutPage )
-    router.get('/crud', homeController.getCRUD )
-    router.post('/post-crud', homeController.postCRUD )
-    router.get('/get-crud',homeController.displayGetCRUD)
-    router.get('/edit-crud',homeController.editCRUD)
-    router.post('/put-crud',homeController.putCRUD)
-    router.get('/delete-crud',homeController.deleteCRUD)
+    router.get('/crud', homeController.getCRUD ) // Enter new User infor
+    router.post('/post-crud', homeController.postCRUD ) // Create a new User
+    router.get('/get-crud',homeController.displayGetCRUD)// Display all users
+    router.get('/delete-crud',homeController.deleteCRUD) // Delete user by ID
 
+    router.get('/edit-crud',homeController.editCRUD)// just show infor of the select user
+    router.post('/put-crud',homeController.putCRUD)// Edit user
+
+
+   
+
+    // Front end call these api belove
     router.post('/api/login', userController.handleLogin);
     router.get('/api/get-all-users', userController.handleGetAllUser);
 
