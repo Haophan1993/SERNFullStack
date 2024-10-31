@@ -76,6 +76,7 @@ let putCRUD = async (req,res)=>{
 
 
 let deleteCRUD= async (req, res)=>{
+    console.log(req.body)
     let id=req.query.id;
     let afterDeleteUsers= await CRUDService.deleteUserbyId(id);
    

@@ -100,18 +100,24 @@ let updateUserData=(data)=>{
             
             if(user){
 
-                await db.User.update({firstName:data.firstName,
+                await db.User.update({
+                    firstName:data.firstName,
                     lastName:data.lastName,
-                    address:data.address}, {where:{id:data.id}})
+                    address:data.address}, 
+                    {where:{id:data.id}})
                 
 
                 
+                let allUsers = await db.User.findAll()
 
-                let allUsers= await db.User.findAll();
+                resolve(allUsers)
+                
 
-                resolve(allUsers);
+                
             }else{
-                resolve();
+                resolve(
+                    
+                );
             }
             
 
